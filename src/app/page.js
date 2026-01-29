@@ -1,0 +1,25 @@
+import Image from "next/image";
+import HeroSection from "../../components/HeroSection";
+import AboutUs from "../../components/Home/AboutUs";
+import EventsSection from "../../components/Home/EventSection";
+import Sponsors from "../../components/Home/Sponors";
+import Footer from "../../components/Home/Footer";
+
+export default function Home() {
+  return (
+    <main className="flex flex-col min-h-screen bg-[#01020a]">
+      <HeroSection/>
+     
+      <div className="relative z-20">
+        <AboutUs/>
+        <EventsSection/>
+        <Sponsors/>
+        <Footer/>
+       
+     
+    </div>
+
+    </main>
+   
+  );
+}
