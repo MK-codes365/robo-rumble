@@ -114,7 +114,8 @@ export default function Navbar() {
         {/* --- HAMBURGER BUTTON --- */}
         <button
           onClick={() => setMenuKhula(!menuKhula)}
-          className="lg:hidden z-[10001] relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 group flex-shrink-0 rounded-full hover:bg-white/5 transition-colors"
+          className="lg:hidden z-[10001] relative w-12 h-12 flex flex-col justify-center items-center gap-1.5 group flex-shrink-0 rounded-full hover:bg-white/5 transition-colors"
+          aria-label="Toggle Menu"
         >
           <span className={`block h-[2px] w-6 bg-[#FFD700] rounded transition-all duration-300 origin-center ${menuKhula ? "rotate-45 translate-y-[5px]" : ""}`} />
           <span className={`block h-[2px] w-4 bg-[#FFD700] rounded transition-all duration-300 ${menuKhula ? "opacity-0 scale-0" : "group-hover:w-6"}`} />
@@ -130,7 +131,7 @@ export default function Navbar() {
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#FFD700]/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-[#00FF9E]/10 rounded-full blur-[80px] pointer-events-none" />
 
-          <div className="flex flex-col h-full pt-32 px-10 pb-8">
+          <div className="flex flex-col h-full pt-32 px-10 pb-8 overflow-y-auto no-scrollbar">
             <div className="flex flex-col gap-6 items-end text-right">
               {sabLinks.map((link, i) => (
                 <Link
@@ -188,8 +189,8 @@ export default function Navbar() {
 
       {/* Bottom Border Line with Glow */}
       <div className={`w-full h-[1px] transition-all duration-500 ${scrollHua
-          ? "bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent shadow-[0_0_10px_#FFD700]"
-          : "bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        ? "bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent shadow-[0_0_10px_#FFD700]"
+        : "bg-gradient-to-r from-transparent via-white/10 to-transparent"
         }`} />
     </nav>
   )
